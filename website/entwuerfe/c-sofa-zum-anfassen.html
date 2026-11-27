@@ -1,0 +1,38 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C · Das Sofa zum Anfassen</title><link rel="stylesheet" href="basis.css">
+<style>
+canvas{left:auto;right:0;width:62vw;cursor:grab}
+.text{position:fixed;left:clamp(16px,3.5vw,56px);top:50%;transform:translateY(-42%);z-index:3;max-width:44vw}
+.hinweis{position:fixed;right:clamp(16px,3.5vw,56px);bottom:clamp(20px,5vh,48px);font-size:14px;color:var(--gedaempft)}
+.stoffe{display:flex;gap:10px;margin-top:34px}
+.stoffe button{width:44px;height:44px;border:1px solid #0002;border-radius:50%;cursor:pointer}
+.stoffe button[aria-pressed=true]{outline:2px solid var(--text);outline-offset:3px}
+@media (max-width:720px){canvas{width:100vw;height:56svh;top:auto;bottom:0}.text{top:96px;transform:none;max-width:none;right:16px}.unter{margin:14px 0 18px}}
+</style></head><body>
+<canvas id="c"></canvas>
+<header><img src="../logo/estilo-logo.svg" alt="ESTILO Einrichtungsstudio"><nav><a href="#">Wohnwelten</a><a href="#">Ablauf</a><a href="#">Über Ebru</a><a href="#">Besuch</a></nav></header>
+<div class="text"><h1>Räume, die<br><em>zu Ihnen</em> passen.</h1><p class="unter">Polstermöbel, Betten, Schränke und Esszimmer, ausgesucht und abgestimmt von Ebru Filiz. Am Garnmarkt 17 in Götzis.</p><a class="knopf" href="#">Beratung anfragen</a>
+<div class="stoffe" aria-label="Bezug wählen"><button aria-label="Salbeigrün" aria-pressed="true" style="background:#6F7F50"></button><button aria-label="Cognac-Leder" style="background:#8A5A36"></button><button aria-label="Leinen" style="background:#D8CFC0"></button><button aria-label="Anthrazit" style="background:#45463F"></button></div></div>
+<p class="hinweis">Sofa mit der Maus drehen</p>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import { THREE, renderer, sofa, leuchten, lamellen, tageslicht, FARBE } from './szene.js';
+const cv = document.getElementById('c'), r = renderer(cv);
+const s = new THREE.Scene(); s.background = new THREE.Color(FARBE.leinen);
+const boden = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.ShadowMaterial({ opacity: 0.18 })); boden.rotation.x = -Math.PI / 2; boden.receiveShadow = true; s.add(boden);
+const sockel = new THREE.Mesh(new THREE.CylinderGeometry(1.9, 1.9, 0.06, 96), new THREE.MeshStandardMaterial({ color: 0xe8e0d3, roughness: 0.9 })); sockel.position.y = 0.03; sockel.receiveShadow = true; s.add(sockel);
+const so = sofa(); so.position.y = 0.06; s.add(so); s.add(leuchten()); const la = lamellen(); la.position.z = -0.3; s.add(la); tageslicht(s, 0.9);
+const cam = new THREE.PerspectiveCamera(34, 1, 0.1, 60);
+let dreh = -0.35, ziel = -0.35;
+cv.addEventListener('pointerdown', e => { cv.setPointerCapture(e.pointerId); const x0 = e.clientX, z0 = ziel; cv.onpointermove = m => { ziel = z0 + (m.clientX - x0) * 0.008; }; });
+cv.addEventListener('pointerup', () => { cv.onpointermove = null; });
+document.querySelectorAll('.stoffe button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.stoffe button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  const c = new THREE.Color(b.style.background); so.traverse(m => { if (m.material && m.material.color && m.geometry.type === 'RoundedBoxGeometry') { const hsl = {}; m.material.color.getHSL(hsl); m.material.color.copy(c).offsetHSL(0, 0, m.material.userData.dl ?? (m.material.userData.dl = 0)); } });
+});
+function zeige() { dreh += (ziel - dreh) * 0.08; so.rotation.y = dreh; cam.position.set(Math.sin(0.15) * 7.4, 2.3, Math.cos(0.15) * 7.4); cam.lookAt(0, 0.95, 0); r.render(s, cam); }
+function groesse() { r.setSize(cv.clientWidth, cv.clientHeight, false); cam.aspect = cv.clientWidth / cv.clientHeight; cam.updateProjectionMatrix(); }
+addEventListener('resize', groesse); groesse();
+(function loop() { zeige(); requestAnimationFrame(loop); })();
+window.setT = t => { ziel = dreh = -0.35 + t * 1.4; zeige(); }; window.bereit = true;
+</script></body></html>

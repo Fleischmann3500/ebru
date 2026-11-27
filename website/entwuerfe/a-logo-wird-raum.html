@@ -1,0 +1,41 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A · Das Logo wird Raum</title><link rel="stylesheet" href="basis.css">
+<style>
+#logo{position:fixed;left:50%;top:50%;width:min(74vw,980px);transform:translate(-50%,-50%);color:var(--text);z-index:2;pointer-events:none}
+#logo svg{width:100%;height:auto;display:block}
+.text{position:fixed;left:clamp(16px,3.5vw,56px);bottom:clamp(28px,7vh,80px);z-index:3;opacity:0}
+header img{opacity:0}
+</style></head><body>
+<canvas id="c"></canvas>
+<header><img src="../logo/estilo-logo.svg" alt="ESTILO Einrichtungsstudio"><nav><a href="#">Wohnwelten</a><a href="#">Ablauf</a><a href="#">Über Ebru</a><a href="#">Besuch</a></nav></header>
+<div id="logo"></div>
+<div class="text"><h1>Räume, die<br><em>zu Ihnen</em> passen.</h1><p class="unter">Polstermöbel, Betten, Schränke und Esszimmer, ausgesucht und abgestimmt von Ebru Filiz. Am Garnmarkt 17 in Götzis.</p><a class="knopf" href="#">Beratung anfragen</a></div>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import { THREE, renderer, sofa, leuchten, lamellen, raum, tageslicht, FARBE } from './szene.js';
+const svg = await (await fetch('../logo/estilo-logo.svg')).text();
+const logo = document.getElementById('logo'); logo.innerHTML = svg;
+const r = renderer(document.getElementById('c'));
+const s = new THREE.Scene(); s.background = new THREE.Color(FARBE.leinen);
+s.add(raum(), sofa(), leuchten(), lamellen()); tageslicht(s);
+const cam = new THREE.PerspectiveCamera(2, 1, 0.1, 500);
+const ziel = new THREE.Vector3(0.35, 1.2, 0), breite = 6.2;
+const glatt = x => x * x * (3 - 2 * x);
+function zeige(t) {
+  // Dolly-Zoom: die Bildbreite auf Höhe des Sofas bleibt gleich, die Brennweite wird weit -> aus der flachen Fläche wird Tiefe
+  const k = glatt(Math.min(1, t / 0.85)), fov = 2 + k * 56;
+  const d = breite / (2 * Math.tan(THREE.MathUtils.degToRad(fov) / 2) * cam.aspect);
+  cam.fov = fov; cam.position.set(ziel.x - k * 0.9, ziel.y + 0.2 + k * 0.25, ziel.z + d); cam.lookAt(ziel); cam.updateProjectionMatrix();
+  logo.style.opacity = 1 - glatt(Math.min(1, t / 0.22));
+  document.querySelector('.text').style.opacity = glatt(Math.max(0, (t - 0.7) / 0.3));
+  document.querySelector('header img').style.opacity = glatt(Math.max(0, (t - 0.6) / 0.3));
+  document.getElementById('c').style.opacity = glatt(Math.min(1, t / 0.12 + 0.0));
+  r.render(s, cam);
+}
+function groesse() { r.setSize(innerWidth, innerHeight, false); cam.aspect = innerWidth / innerHeight; zeige(window.__t ?? 0); }
+addEventListener('resize', groesse);
+window.setT = t => { window.__t = t; zeige(t); };
+document.body.style.height = '400vh';
+addEventListener('scroll', () => window.setT(scrollY / (document.body.scrollHeight - innerHeight)));
+groesse(); window.bereit = true;
+</script></body></html>
