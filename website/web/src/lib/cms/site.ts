@@ -1,6 +1,6 @@
 // Inhalte aus Sanity, Feld für Feld mit den Standardtexten aus content.ts zusammengeführt.
 // Ohne NEXT_PUBLIC_SANITY_PROJECT_ID (oder bei einem Fehler) gelten nur die Standardtexte.
-import { createClient } from 'next-sanity';
+import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 import * as std from '@/lib/content';
 
@@ -30,7 +30,7 @@ export async function getInhalt(): Promise<Inhalt> {
   if (!projectId) return d;
   try {
     const client = createClient({ projectId, dataset, apiVersion: '2025-01-01', useCdn: true });
-    const r = await client.fetch<Roh>(`{ "seite": *[_id == "seite"][0], "studio": *[_id == "studio"][0], "stimmen": *[_id == "stimmen"][0] }`, {}, { next: { revalidate: 120 } });
+    const r = await client.fetch<Roh>(`{ "seite": *[_id == "seite"][0], "studio": *[_id == "studio"][0], "stimmen": *[_id == "stimmen"][0] }`);
     const s = r.seite ?? {}, st = r.studio ?? {};
     const titel = s.heroTitel?.filter(voll);
     const telefon = oder(st.telefon, d.firma.telefon);
