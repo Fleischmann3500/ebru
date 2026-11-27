@@ -1,8 +1,8 @@
 # ESTILO Einrichtungsstudio · Website
 
-**Stand (27.11.2026):** Fragen geklärt und bestätigt. Projektordner angelegt, Inhalte und Bilder von estilo.at gesichert. Als Nächstes: Konzept und drei Hero-Entwürfe.
+**Stand (27.11.2026):** Hero-Richtung A + C gewählt. Als Nächstes: Blender-Szene mit Poly-Haven-Assets.
 
-**Status:** Konzept
+**Status:** Design
 **Geld:** Preis noch nicht vereinbart · bezahlt 0 € · offen 0 € · Ausgaben 0 €
 
 ---
@@ -64,6 +64,10 @@ Was sie macht: Möbelhandel und persönliche Einrichtungsberatung (Wohnzimmer, S
 | 27.11.2026 | Inspirationsbilder bleiben als solche gekennzeichnet | Alte Seite sagt ausdrücklich „kein dokumentiertes Kundenprojekt“ |
 | 27.11.2026 | Ablage im Repo statt Onur-Websiten | Rechner in der Sitzung nicht erreichbar; später übertragen |
 | 27.11.2026 | Eigene Cloud-Umgebung „ebru“ | estilo.at war im Standard-Netz gesperrt |
+| 27.11.2026 | Hero: A + C (Logo wird Raum per Dolly-Zoom, Sofa zum Drehen an der Wohnzimmer-Station) | Leitmotiv aus dem eigenen Logo, beide 3D-Wünsche in einer Geschichte |
+| 27.11.2026 | Knopf in `#56683E` statt `#6E8450` | Heller Text auf `#6E8450` nur ca. 4,4 : 1, AA verlangt 4,5 |
+| 27.11.2026 | Sitemap: `/`, `/wohnwelten`, `/impressum`, `/datenschutz` | Kein Shop, Formular ohne Upload, Galerie der alten Seite braucht Platz |
+| 27.11.2026 | Startseite: Logo wird Raum, Wohnwelten (4 Kamerastationen), 5 Schritte, Ebru, Stimmen, Besuch + Formular | Reihenfolge wie ein Besuch im Studio: ansehen, verstehen, kennenlernen, vorbeikommen |
 
 ## Offen
 
@@ -78,3 +82,4 @@ Was sie macht: Möbelhandel und persönliche Einrichtungsberatung (Wohnzimmer, S
 ## Verlauf
 
 - 27.11.2026 · Projekt angelegt, Fragen geklärt, alte Seite (Texte + 343 Bilder) nach `Vom Kunden/estilo-at/` gesichert
+- 27.11.2026 · Logo vektorisiert (`website/logo/estilo-logo.svg`), drei Hero-Skizzen gezeigt, A + C gewählt
