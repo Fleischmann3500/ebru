@@ -5,7 +5,7 @@ import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.j
 
 type MatInfo = { tex?: string; farbe?: number[]; emit?: number[] | null; glas?: boolean };
 type TexInfo = { datei: string; grau: boolean; farbe?: string };
-export type Station = { pos: THREE.Vector3; quat: THREE.Quaternion; fov: number };
+export type Station = { pos: THREE.Vector3; quat: THREE.Quaternion; fov: number; t: number };
 
 const SRGB_07 = Math.pow((0.7 + 0.055) / 1.055, 2.4); // Mittelwert der Graustruktur, linear
 
@@ -25,7 +25,8 @@ export class Welt {
   gruppen: Record<string, THREE.Object3D[]> = {};
   sofa?: THREE.Object3D;
   private sofaStoff: THREE.MeshBasicMaterial[] = [];
-  private sofaDreh = 0; private sofaZiel = 0;
+  private sofaDreh = 0; private sofaZiel = 0; private sofaBasis = 0;
+  private pfad?: THREE.CatmullRomCurve3; private stationsPunkt: number[] = [];
   private ziel = 0; private ist = 0;          // Fortschritt über die Stationen (0 .. n-1)
   private maus = new THREE.Vector2(); private mausIst = new THREE.Vector2();
   private uhr = new THREE.Clock();
@@ -38,7 +39,7 @@ export class Welt {
     this.renderer = new THREE.WebGLRenderer({ canvas: o.canvas, antialias: !o.handy, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, o.handy ? 1.5 : 2));
     this.renderer.toneMapping = THREE.NeutralToneMapping; // erhält Farbtöne (AgX entsättigte das Sofa)
-    this.renderer.toneMappingExposure = 0.62;
+    this.renderer.toneMappingExposure = 1.0;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.szene.background = new THREE.Color('#F3EEE7');
   }
@@ -78,7 +79,7 @@ export class Welt {
 
     // Himmel: große Kugel hinter den Fenstern (nicht als Hintergrund, damit der Leinen-Grund im Einstieg bleibt)
     const kugel = new THREE.Mesh(new THREE.SphereGeometry(150, 48, 24), new THREE.MeshBasicMaterial({ map: himmel, side: THREE.BackSide, depthWrite: false }));
-    kugel.rotation.y = THREE.MathUtils.degToRad(-108 + 90); kugel.position.set(9, 0, 0); kugel.renderOrder = -1;
+    kugel.rotation.y = THREE.MathUtils.degToRad(-108 + 90); kugel.position.set(11, 0, -6); kugel.renderOrder = -1;
     this.szene.add(kugel);
 
     const matCache = new Map<string, THREE.Material>();
@@ -123,7 +124,7 @@ export class Welt {
         neu.name = name;
         matCache.set(schluessel, neu);
       }
-      if (name === 'sofa_gruen' || name === 'sofa_lehne') {
+      if (name === 'sofa_gruen' || name === 'sofa_keder') {
         // eigenes Material für das Sofa (Bezug umfärbbar, ohne andere Objekte mitzufärben)
         neu = (neu as THREE.MeshBasicMaterial).clone();
         const quelle = matCache.get(schluessel) as THREE.MeshBasicMaterial;
@@ -136,24 +137,28 @@ export class Welt {
     this.sofa = welt.getObjectByName('sofa') ?? undefined;
     this.szene.add(welt);
 
-    // Kamerastationen aus Blender
+    // Kamerastationen und Wegpunkte aus Blender: station_<n>_<name>, weg_<n>_<i> (liegt zwischen Station n und n+1)
     welt.updateMatrixWorld(true);
-    const namen = ['station_0_logo', 'station_1_wohnen', 'station_2_schlafen', 'station_3_essen', 'station_4_buero'];
-    for (const n of namen) {
-      const c = welt.getObjectByName(n) as THREE.Object3D | undefined;
-      const cam = (c && ((c as THREE.PerspectiveCamera).isPerspectiveCamera ? c : c.children.find((x) => (x as THREE.PerspectiveCamera).isPerspectiveCamera))) as THREE.PerspectiveCamera | undefined;
+    const stat: { n: number; o: THREE.Object3D }[] = [], wege: { n: number; i: number; o: THREE.Object3D }[] = [];
+    welt.traverse((o) => {
+      const s1 = /^station_(\d+)_/.exec(o.name); const w1 = /^weg_(\d+)_(\d+)$/.exec(o.name);
+      if (s1 && !stat.some((x) => x.n === +s1[1])) stat.push({ n: +s1[1], o });
+      if (w1) wege.push({ n: +w1[1], i: +w1[2], o });
+    });
+    stat.sort((x, y) => x.n - y.n);
+    const punkte: THREE.Vector3[] = [];
+    for (const { n, o } of stat) {
+      const cam = ((o as THREE.PerspectiveCamera).isPerspectiveCamera ? o : o.children.find((x) => (x as THREE.PerspectiveCamera).isPerspectiveCamera)) as THREE.PerspectiveCamera | undefined;
       if (!cam) continue;
       const pos = new THREE.Vector3(), quat = new THREE.Quaternion();
       cam.getWorldPosition(pos); cam.getWorldQuaternion(quat);
-      this.stationen.push({ pos, quat, fov: cam.fov });
+      this.stationen.push({ pos, quat, fov: cam.fov, t: 0 });
+      this.stationsPunkt.push(punkte.length); punkte.push(pos);
+      for (const w of wege.filter((x) => x.n === n).sort((x, y) => x.i - y.i)) punkte.push(w.o.getWorldPosition(new THREE.Vector3()));
     }
-    // Zusatzstation: nah am Sofa (zum Drehen und Bezug wählen), zwischen Wohnen und Schlafen
-    if (this.sofa) {
-      const box = new THREE.Box3().setFromObject(this.sofa); const mitte = box.getCenter(new THREE.Vector3());
-      const pos = mitte.clone().add(new THREE.Vector3(0.55, 0.95, 3.2));
-      const blick = new THREE.PerspectiveCamera(); blick.position.copy(pos); // Kamera: lookAt zeigt entlang -Z blick.lookAt(mitte.clone().add(new THREE.Vector3(0.25, -0.05, 0)));
-      this.stationen.splice(2, 0, { pos, quat: blick.quaternion.clone(), fov: 42 });
-    }
+    this.pfad = new THREE.CatmullRomCurve3(punkte, false, 'centripetal');
+    this.stationsPunkt.forEach((k, j) => { this.stationen[j].t = k / Math.max(1, punkte.length - 1); });
+    if (this.sofa) this.sofaBasis = this.sofa.rotation.y;
     this.bereit = true;
     this.setzeKamera(0, true);
     return this;
@@ -167,7 +172,7 @@ export class Welt {
     for (const m of this.sofaStoff) {
       if (!hex) { m.color.copy(m.userData.basis); continue; }
       const c = new THREE.Color(hex).multiplyScalar(1 / SRGB_07);
-      if (m.name === 'sofa_lehne') c.multiplyScalar(0.92);
+      if (m.name === 'sofa_keder') c.multiplyScalar(0.8);
       m.color.copy(c);
     }
     this.schmutzig = true;
@@ -190,11 +195,16 @@ export class Welt {
     const i = Math.min(Math.floor(p), n - 2), f = p - i;
     const a = this.stationen[i], b = this.stationen[Math.min(i + 1, n - 1)];
     const s = f * f * (3 - 2 * f);
-    // Position auf einer Catmull-Rom-Kurve (weich, ohne Knick an den Stationen)
-    const v0 = this.stationen[Math.max(i - 1, 0)].pos, v3 = this.stationen[Math.min(i + 2, n - 1)].pos;
-    const kurve = new THREE.CatmullRomCurve3([v0, a.pos, b.pos, v3], false, 'centripetal');
-    const pos = kurve.getPoint((1 + s) / 3);
+    // Position auf der Kurve durch alle Stationen und Wegpunkte (geht durch Türöffnungen, nicht durch Wände)
+    const t = THREE.MathUtils.lerp(a.t, b.t, s);
+    const pos = this.pfad ? this.pfad.getPoint(t) : a.pos.clone().lerp(b.pos, s);
     const quat = a.quat.clone().slerp(b.quat, s);
+    if (this.pfad && b.t - a.t > 0.12) {
+      // lange Wege: unterwegs in Gehrichtung schauen, wie ein Mensch
+      const vor = this.pfad.getTangent(t); vor.y = 0; vor.normalize();
+      const gehen = new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(new THREE.Vector3(), vor.negate(), new THREE.Vector3(0, 1, 0)));
+      quat.slerp(gehen, Math.sin(Math.PI * s) * 0.7);
+    }
     let fov = THREE.MathUtils.lerp(a.fov, b.fov, s);
     // Hochformat: Brennweite so öffnen, dass die Breite des Bildes erhalten bleibt
     const asp = this.kamera.aspect;
@@ -246,7 +256,7 @@ export class Welt {
     this.setzeKamera(this.ist);
     if (this.sofa) {
       this.sofaDreh += (this.sofaZiel - this.sofaDreh) * (this.o.ruhig ? 1 : 1 - Math.exp(-dt * 8));
-      this.sofa.rotation.y = this.sofaDreh;
+      this.sofa.rotation.y = this.sofaBasis + this.sofaDreh;
     }
     this.renderer.render(this.szene, this.kamera);
   }

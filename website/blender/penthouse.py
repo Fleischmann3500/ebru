@@ -155,8 +155,8 @@ def drehkoerper(name, profil, pos, m, n=48, lm=None):
     aktiv(o); bpy.ops.object.shade_smooth(); o.select_set(False)
     return flagge(o, lm=lm)
 
-def rohr(name, punkte, r, m, lm=None):
-    cu = bpy.data.curves.new(name, 'CURVE'); cu.dimensions = '3D'; cu.bevel_depth = r; cu.bevel_resolution = 3
+def rohr(name, punkte, r, m, lm=None, aufl=3):
+    cu = bpy.data.curves.new(name, 'CURVE'); cu.dimensions = '3D'; cu.bevel_depth = r; cu.bevel_resolution = aufl
     sp = cu.splines.new('POLY'); sp.points.add(len(punkte) - 1)
     for i, p in enumerate(punkte): sp.points[i].co = (*p, 1)
     o = bpy.data.objects.new(name, cu); sz.collection.objects.link(o)
@@ -164,7 +164,7 @@ def rohr(name, punkte, r, m, lm=None):
     o.data.materials.append(m); wuerfel_uv(o, 0.3); glaetten(o, False)
     return flagge(o, lm=lm)
 
-def polster(name, gr, pos, m, rad=0.05, puff=0.02, rot=(0, 0, 0), falten=0.004, schnitte=9, keder=None, lm=None):
+def polster(name, gr, pos, m, rad=0.05, puff=0.02, rot=(0, 0, 0), falten=0.004, schnitte=6, keder=None, lm=None):
     """Weiches Polster: abgerundeter Quader, oben und unten leicht gewölbt, feine Falten, optional Keder an beiden Kanten."""
     hx, hy, hz = gr[0] / 2, gr[1] / 2, gr[2] / 2
     bm = bmesh.new(); bmesh.ops.create_cube(bm, size=1.0)
@@ -182,7 +182,8 @@ def polster(name, gr, pos, m, rad=0.05, puff=0.02, rot=(0, 0, 0), falten=0.004, 
     me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
     o = bpy.data.objects.new(name, me); sz.collection.objects.link(o)
     me.materials.append(m)
-    mod_anwenden(o, 'SUBSURF', levels=2, render_levels=2)
+    stufe = 2 if max(gr) > 0.9 else 1
+    mod_anwenden(o, 'SUBSURF', levels=stufe, render_levels=stufe)
     if falten > 0:
         tex = bpy.data.textures.get('falten') or bpy.data.textures.new('falten', 'CLOUDS'); tex.noise_scale = 0.12
         mod_anwenden(o, 'DISPLACE', texture=tex, strength=falten, mid_level=0.5)
@@ -197,7 +198,7 @@ def polster(name, gr, pos, m, rad=0.05, puff=0.02, rot=(0, 0, 0), falten=0.004, 
                 for i in range(7):
                     a = math.radians(a0 + 90 * i / 6); pts.append((cx + rad * math.cos(a), cy + rad * math.sin(a), z))
             pts.append(pts[0])
-            teile.append(rohr(name + f'_keder{s}', pts, 0.0055, keder))
+            teile.append(rohr(name + f'_keder{s}', pts, 0.0055, keder, aufl=1))
     o = verbinden(teile, name) if len(teile) > 1 else o
     o.location = pos; o.rotation_euler = rot
     return flagge(o, lm=lm)
@@ -390,6 +391,8 @@ for r in range(4):
             kiste(f'buch_{r}{c}{b}', (random.uniform(0.18, 0.24), dicke, hoch), (4.32, yy + dicke / 2, boden + hoch / 2), random.choice(BUCH), fase=0.003, seg=1, lm='moebel', uv=0.3)
             yy += dicke + 0.004
 importiere('pachira_aquatica_01', (9.3, 4.3, 0), skala=1.05)
+polster('teppich_buero', (2.6, 1.9, 0.016), (7.2, 1.6, 0.008), M['teppich'], rad=0.008, puff=0.0, falten=0.0, schnitte=4, lm='arch')
+importiere('mid_century_lounge_chair', (5.2, 3.7, 0), rot_z=math.radians(300))
 drehkoerper('schreibtischleuchte', [(0.0, 0.775), (0.08, 0.775), (0.08, 0.785), (0.012, 0.79), (0.012, 1.15), (0.0, 1.15)], (6.55, 0.6, 0), M['messing'], lm='moebel')
 g = drehkoerper('schreibtischleuchte_schirm', [(0.13, 1.08), (0.09, 1.24)], (6.55, 0.6, 0), M['schirm']); flagge(g, bake=False)
 punktlicht_spaeter = [((6.55, 0.6, 1.1), 15)]
@@ -462,7 +465,7 @@ def bett():
         t.append(polster(f'bett_kopf{i}', (0.36, 1.2, 0.13), (-1.08 + i * 0.36, 1.1, 0.75), M['bett'], rad=0.06, puff=0.025, rot=(math.pi / 2, 0, 0), falten=0.003))
     t.append(polster('bett_matratze', (1.84, 2.02, 0.22), (0, -0.05, 0.46), M['waesche'], rad=0.06, puff=0.01, falten=0.002))
     for i, x in enumerate((-0.45, 0.45)):
-        t.append(polster(f'bett_kissen{i}', (0.78, 0.5, 0.17), (x, 0.72, 0.68), M['waesche'], rad=0.08, puff=0.07, rot=(math.radians(-28), 0, 0), falten=0.006))
+        t.append(polster(f'bett_kissen{i}', (0.8, 0.52, 0.13), (x, 0.74, 0.66), M['waesche'], rad=0.05, puff=0.075, rot=(math.radians(-30), 0, 0), falten=0.009))
     t.append(polster('bett_zierkissen', (0.5, 0.42, 0.13), (-0.1, 0.48, 0.66), M['kis_d'], rad=0.07, puff=0.05, rot=(math.radians(-24), 0, math.radians(6)), falten=0.005))
     return t
 
@@ -488,7 +491,7 @@ def stoff(name, gr, n, pos, ueber, m, dicke=0.045, frames=40, masse=0.4, biegung
 
 bt = bett()
 koll = [o for o in bt if o.name in ('bett_matratze', 'bett_rahmen')]
-decke = stoff('bett_decke', (2.24, 1.6), (56, 44), (0, -0.32, 0.72), koll, M['waesche'])
+decke = stoff('bett_decke', (2.24, 1.6), (44, 34), (0, -0.32, 0.72), koll, M['waesche'])
 plaid = stoff('bett_plaid', (2.3, 0.6), (60, 18), (0.0, -0.78, 0.95), koll + [decke], M['plaid'], dicke=0.012, masse=0.25, biegung=0.6)
 gruppe(bt + [decke, plaid], 'bett', pos=(18.6, 6.2, 0), rz=math.radians(180))   # Kopf an der Südwand (y = 5)
 for i, x in enumerate((17.15, 20.05)):
@@ -552,6 +555,7 @@ for i, lx in enumerate((11.85, 13.15)):
     punktlicht(f'licht_kuppel_{i}', (lx, 10.0, 1.6), 30, r=0.15)
 for i, (pos, e) in enumerate(punktlicht_spaeter): punktlicht(f'licht_tisch_{i}', pos, e, r=0.1)
 for i, x in enumerate((17.15, 20.05)): punktlicht(f'licht_nacht_{i}', (x, 5.36, 0.95), 10, r=0.1)
+flaechenlicht('buero_decke', (7.2, 2.5, H - 0.05), (0, 0, 0), (3.0, 2.5), 120, farbe=(1, 0.93, 0.85))
 
 # ================================================================ Kamerastationen und Wegpunkte
 def kamera(name, pos, ziel, fov=50):

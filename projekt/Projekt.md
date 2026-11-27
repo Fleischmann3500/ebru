@@ -93,3 +93,4 @@ Was sie macht: Möbelhandel und persönliche Einrichtungsberatung (Wohnzimmer, S
 - 27.11.2026 · Blender-Szene (szene.py), Licht gebacken (128 Samples), Website gebaut und in Chromium geprüft (Desktop), Sanity-Studio baut
 - 27.11.2026 · Möbel-Lichtatlas 2048 px, Handy-Variante (4,8 MB), Farben im Browser korrigiert (Neutral-Tonemapping), Handy-Layout, Kopfzeile; geprüft Desktop + Handy
 - 27.11.2026 · Runde 1 (V2 Penthouse): penthouse.py gebaut, Vorschau gezeigt
+- 27.11.2026 · V2 fertig gebaut, gebacken, im Browser geprüft und auf Vercel gepusht

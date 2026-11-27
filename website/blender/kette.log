@@ -1,0 +1,22 @@
+00:00.519  cycles           | WARNING CUEW initialization failed: Error opening the library
+gerendert station_0_logo
+gerendert station_1_wohnen
+gerendert station_2_sofa
+gerendert station_3_buero
+gerendert station_4_essen
+gerendert station_5_schlafen
+Atlas arch: 30 Objekte, 755 s
+Atlas moebel: 144 Objekte, 1156 s
+Vertex-Licht: 57 Objekte, 156 s
+fertig
+Lichtatlas arch 2048 2048 heiße Pixel 2722
+Lichtatlas moebel 2048 2048 heiße Pixel 16439
+exportiert /home/user/ebru/website/blender/../web/public/welt/estilo.roh.glb 22712 KB
+exportiert /home/user/ebru/website/blender/../web/public/welt/estilo.handy.roh.glb 16720 KB
+info: estilo.roh.glb (23.26 MB) → estilo.glb (8.22 MB)
+info: estilo.handy.roh.glb (17.12 MB) → estilo.handy.glb (5.84 MB)
+2768 KB
+himmel.webp
+stationen, og.jpg
+ENDE
+exit 0

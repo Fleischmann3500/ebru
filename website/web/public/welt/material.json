@@ -1,12 +1,12 @@
 {
- "bett_samt": {
-  "tex": "bett_samt",
+ "bett_stoff": {
+  "tex": "bett_stoff",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.85,
+  "rough": 0.95,
   "metall": 0.0,
   "emit": null,
   "glas": false
@@ -14,24 +14,109 @@
  "bettwaesche": {
   "tex": "bettwaesche",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
   "rough": 0.95,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
+ "boden": {
+  "tex": "boden",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.45,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "brass_vase_001": {},
+ "buch_0": {
+  "tex": "",
+  "farbe": [
+   0.6938717612919899,
+   0.6239603916750761,
+   0.5209955732043543
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "buch_1": {
+  "tex": "",
+  "farbe": [
+   0.25415209433082675,
+   0.1946178304415758,
+   0.12477181756095049
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "buch_2": {
+  "tex": "",
+  "farbe": [
+   0.04970656598412723,
+   0.06847816984440017,
+   0.042311410620809675
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "buch_3": {
+  "tex": "",
+  "farbe": [
+   0.4851499400560704,
+   0.39157247774972326,
+   0.24620132670783548
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "buch_4": {
+  "tex": "",
+  "farbe": [
+   0.10702310297826761,
+   0.06124605423161761,
+   0.03688945040110004
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "buch_5": {
+  "tex": "",
+  "farbe": [
+   0.8069522576692516,
+   0.7605245046752924,
+   0.6724431569576875
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
  "ceramic_vase_01": {},
- "ceramic_vase_03": {},
+ "ceramic_vase_02": {},
  "ceramic_vase_04": {},
  "decke": {
   "tex": "",
   "farbe": [
-   0.9646862478944651,
-   0.938685728457888,
-   0.8962693533742664
+   0.9301108583754237,
+   0.9046611743911496,
+   0.8631572134541023
   ],
   "rough": 0.95,
   "metall": 0.0,
@@ -39,13 +124,13 @@
   "glas": false
  },
  "eiche": {
-  "tex": "oak_veneer_01",
+  "tex": "white_oak_veneer",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.55,
+  "rough": 0.5,
   "metall": 0.0,
   "emit": null,
   "glas": false
@@ -53,93 +138,133 @@
  "fensterrahmen": {
   "tex": "",
   "farbe": [
-   0.02315336617811041,
    0.024157632448504756,
-   0.0202885630566524
+   0.02518685962736163,
+   0.021219010376003555
   ],
-  "rough": 0.4,
-  "metall": 0.3,
+  "rough": 0.45,
+  "metall": 0.4,
   "emit": null,
   "glas": false
  },
  "glas": {
   "tex": "",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
   "rough": 0.7,
   "metall": 0.0,
   "emit": null,
   "glas": true
  },
- "kissen": {
-  "tex": "kissen",
+ "keramik": {
+  "tex": "",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.83879901174074,
+   0.799102738014409,
+   0.7379104087727308
+  ],
+  "rough": 0.45,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "kissen_leinen": {
+  "tex": "kissen_leinen",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.95,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "kissen_oliv": {
+  "tex": "kissen_oliv",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.85,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "lampenschirm": {
+  "tex": "",
+  "farbe": [
+   0.8631572134541023,
+   0.7912979403326302,
+   0.6724431569576875
   ],
   "rough": 0.9,
   "metall": 0.0,
-  "emit": null,
-  "glas": false
- },
- "lack_kaschmir": {
-  "tex": "",
-  "farbe": [
-   0.6866853124353135,
-   0.6307571363461468,
-   0.5457244613701866
+  "emit": [
+   1.0,
+   0.85,
+   0.62
   ],
-  "rough": 0.35,
-  "metall": 0.0,
-  "emit": null,
-  "glas": false
- },
- "lack_salbei": {
-  "tex": "",
-  "farbe": [
-   0.20507873639031693,
-   0.25415209433082675,
-   0.14412847085805777
-  ],
-  "rough": 0.35,
-  "metall": 0.0,
-  "emit": null,
   "glas": false
  },
  "led_streifen": {
   "tex": "",
   "farbe": [
    1.0,
-   0.9,
-   0.75
+   0.8713671191987972,
+   0.7011018919329731
   ],
   "rough": 0.7,
   "metall": 0.0,
   "emit": [
    1.0,
-   0.8,
-   0.55
+   0.84,
+   0.6
   ],
+  "glas": false
+ },
+ "leder_cognac": {
+  "tex": "brown_leather",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.5,
+  "metall": 0.0,
+  "emit": null,
   "glas": false
  },
  "leuchte_glut": {
   "tex": "",
   "farbe": [
    1.0,
-   0.9,
-   0.75
+   0.8713671191987972,
+   0.7011018919329731
   ],
   "rough": 0.7,
   "metall": 0.0,
   "emit": [
    1.0,
-   0.82,
-   0.6
+   0.86,
+   0.66
   ],
+  "glas": false
+ },
+ "messing": {
+  "tex": "",
+  "farbe": [
+   0.45641102318040466,
+   0.27467731206038465,
+   0.10224173308810132
+  ],
+  "rough": 0.3,
+  "metall": 1.0,
+  "emit": null,
   "glas": false
  },
  "metall_schwarz": {
@@ -149,65 +274,63 @@
    0.013702083047289686,
    0.010960094006488246
   ],
-  "rough": 0.35,
-  "metall": 0.6,
+  "rough": 0.4,
+  "metall": 0.7,
   "emit": null,
   "glas": false
  },
  "mid_century_lounge_chair": {},
- "modern_wooden_cabinet": {},
- "modern_wooden_cabinet.001": {},
+ "mid_century_lounge_chair.001": {},
+ "mid_century_lounge_chair.002": {},
  "nuss": {
   "tex": "nuss",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.5,
+  "rough": 0.45,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
  "pachira_aquatica_01_bark": {},
  "pachira_aquatica_01_leaves": {},
- "parkett": {
-  "tex": "herringbone_parquet",
+ "plaid": {
+  "tex": "plaid",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.68,
+  "rough": 1.0,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
  "potted_plant_02_leaves": {},
- "potted_plant_02_leaves.001": {},
  "potted_plant_02_pot": {},
- "potted_plant_02_pot.001": {},
  "potted_plant_04": {},
  "putz": {
   "tex": "putz",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.9,
+  "rough": 0.92,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
- "putz_warm": {
-  "tex": "putz_warm",
+ "putz_aussen": {
+  "tex": "putz_aussen",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
-  "rough": 0.9,
+  "rough": 0.95,
   "metall": 0.0,
   "emit": null,
   "glas": false
@@ -215,66 +338,74 @@
  "sofa_gruen": {
   "tex": "sofa_gruen",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
   "rough": 0.95,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
- "sofa_lehne": {
-  "tex": "sofa_lehne",
+ "sofa_keder": {
+  "tex": "sofa_keder",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
   "rough": 0.95,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
- "standing_picture_frame_01": {},
- "standing_picture_frame_01_artwork": {},
- "standing_picture_frame_01_glass": {},
- "stein_platte": {
+ "spiegel": {
   "tex": "",
   "farbe": [
-   0.6239603916750761,
-   0.5775804404296506,
-   0.5028864580325687
+   0.6938717612919899,
+   0.7156935005064807,
+   0.7156935005064807
   ],
-  "rough": 0.3,
-  "metall": 0.0,
-  "emit": null,
-  "glas": false
- },
- "stuhl_oliv": {
-  "tex": "stuhl_oliv",
-  "farbe": [
-   0.8,
-   0.8,
-   0.8
-  ],
-  "rough": 0.85,
-  "metall": 0.0,
+  "rough": 0.05,
+  "metall": 1.0,
   "emit": null,
   "glas": false
  },
  "teppich": {
   "tex": "teppich",
   "farbe": [
-   0.8,
-   0.8,
-   0.8
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
   ],
   "rough": 1.0,
   "metall": 0.0,
   "emit": null,
   "glas": false
  },
- "wicker_basket_02": {},
+ "terrasse": {
+  "tex": "terrasse",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.8,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "travertin": {
+  "tex": "travertin",
+  "farbe": [
+   0.6038273388553378,
+   0.6038273388553378,
+   0.6038273388553378
+  ],
+  "rough": 0.42,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
  "wooden_bowl_01": {}
 }

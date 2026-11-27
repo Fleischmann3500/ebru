@@ -41,7 +41,7 @@ def lightmap_uv(objs):
 def backe_atlas(gruppe):
     objs = [o for o in meshes if o.get('lm') == gruppe]
     t = time.time(); lightmap_uv(objs)
-    px = PX * 2 if gruppe == 'moebel' else PX   # Möbel brauchen mehr Auflösung (Kontaktschatten)
+    px = PX * 2   # beide Atlanten 2048 (V2: große Wohnung, viele Möbel)
     img = bpy.data.images.new(f'licht_{gruppe}', px, px, float_buffer=True, alpha=False)
     mats = {s.material for o in objs for s in o.material_slots if s.material}
     for m in mats:

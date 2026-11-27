@@ -13,8 +13,8 @@ print('himmel.webp')
 # Stationsbilder aus den Blender-Renders
 os.makedirs(os.path.join(WEB, 'welt', 'stationen'), exist_ok=True)
 v = os.path.join(HIER, 'vorschau')
-for n, q in [('station_0_logo', 'station_0_logo'), ('station_1_wohnen', 'station_1_wohnen'), ('station_1b_sofa', 'nah_sofa'),
-             ('station_2_schlafen', 'station_2_schlafen'), ('station_3_essen', 'station_3_essen'), ('station_4_buero', 'station_4_buero')]:
+for n in ['station_0_logo', 'station_1_wohnen', 'station_2_sofa', 'station_3_buero', 'station_4_essen', 'station_5_schlafen']:
+    q = n
     Image.open(os.path.join(v, q + '.jpg')).convert('RGB').save(os.path.join(WEB, 'welt', 'stationen', n + '.webp'), quality=78)
 og = Image.open(os.path.join(v, 'station_1_wohnen.jpg')).convert('RGB'); og = og.resize((1200, int(1200 * og.height / og.width))).crop((0, 0, 1200, 630)); og.save(os.path.join(WEB, 'og.jpg'), quality=85)
 print('stationen, og.jpg')

@@ -8,7 +8,7 @@ import type { Welt } from './welt/Welt';
 // Zeitachse in Bildschirmhöhen (Scroll)
 const MORPH = 1.0;        // Logo fliegt in den Raum
 const HALT_HERO = 0.7;    // Hero-Text steht
-const STATIONEN = 6;      // Logo-Wand, Wohnen, Sofa, Schlafen, Essen, Büro
+const STATIONEN = 6;      // Logo-Wand, Wohnen, Sofa, Büro, Essen, Schlafen (Reihenfolge des Rundgangs)
 const FAHRT = 0.55;       // Anteil einer Einheit, in dem die Kamera fährt (Rest: Halt zum Lesen)
 const GESAMT = MORPH + HALT_HERO + (STATIONEN - 1) + 0.6;
 
@@ -19,7 +19,7 @@ const ZIELE: Record<string, string[]> = {
   leuchten: ['pendel_0', 'pendel_1', 'pendel_2', 'pendel_kabel_0', 'pendel_kabel_1', 'pendel_kabel_2'],
   lamellen: ['lamelle_0', 'lamelle_1', 'lamelle_2', 'lamelle_3', 'lamelle_4', 'lamelle_5'],
 };
-const POSTER = ['station_0_logo', 'station_1_wohnen', 'station_1b_sofa', 'station_2_schlafen', 'station_3_essen', 'station_4_buero'];
+const POSTER = ['station_0_logo', 'station_1_wohnen', 'station_2_sofa', 'station_3_buero', 'station_4_essen', 'station_5_schlafen'];
 
 type Rect = { x: number; y: number; w: number; h: number };
 

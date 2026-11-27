@@ -45,11 +45,11 @@ export const raeume: Raum[] = [
     details: 'Je nach Modell lassen sich Maße, Sitzgefühl und Bezug anpassen, in Stoff oder Leder. Ausgewählte Modelle gibt es mit Relax- oder Schlaffunktion.',
   },
   {
-    id: 'schlafzimmer',
-    name: 'Schlafzimmer',
-    satz: 'Betten und Schränke mit unterschiedlichen Materialien und Gestaltungsoptionen.',
-    gruppen: ['Massivholzbetten', 'Komfortbetten', 'Schranksysteme'],
-    details: 'Auch Betten mit besonderen Paneelen, integrierter Beleuchtung und Steckdosen, abgestimmt auf Ihre Maße.',
+    id: 'buero',
+    name: 'Büro',
+    satz: 'Individuell geplante Büromöbel für klare Arbeitsbereiche und durchdachte Stauraumlösungen.',
+    gruppen: ['Schreibtische', 'Regale', 'Stauraum'],
+    details: 'Oberflächen, Farben und Zusammenstellungen werden auf Raum und Arbeitsabläufe abgestimmt.',
   },
   {
     id: 'esszimmer',
@@ -59,11 +59,11 @@ export const raeume: Raum[] = [
     details: 'Formen, Größen, Oberflächen, Gestelle und Auszüge je nach Modell, dazu passende Bezüge und Holztöne.',
   },
   {
-    id: 'buero',
-    name: 'Büro',
-    satz: 'Individuell geplante Büromöbel für klare Arbeitsbereiche und durchdachte Stauraumlösungen.',
-    gruppen: ['Schreibtische', 'Regale', 'Stauraum'],
-    details: 'Oberflächen, Farben und Zusammenstellungen werden auf Raum und Arbeitsabläufe abgestimmt.',
+    id: 'schlafzimmer',
+    name: 'Schlafzimmer',
+    satz: 'Betten und Schränke mit unterschiedlichen Materialien und Gestaltungsoptionen.',
+    gruppen: ['Massivholzbetten', 'Komfortbetten', 'Schranksysteme'],
+    details: 'Auch Betten mit besonderen Paneelen, integrierter Beleuchtung und Steckdosen, abgestimmt auf Ihre Maße.',
   },
 ];
 

@@ -49,7 +49,7 @@ for o in list(sz.objects):
     if o.get('export', 1) == 0 or o.type == 'LIGHT': bpy.data.objects.remove(o, do_unlink=True)
 if HANDY:  # Handy: kleine Deko weglassen
     for o in list(sz.objects):
-        if o.name.startswith(('wooden_bowl', 'wicker_basket', 'standing_picture', 'ceramic_vase_04', 'potted_plant_04')):
+        if o.name.startswith(('wooden_bowl', 'brass_vase', 'ceramic_vase_04', 'kleid_', 'buch_')):
             bpy.data.objects.remove(o, do_unlink=True)
 
 tabelle = {}
