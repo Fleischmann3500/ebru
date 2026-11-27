@@ -1,0 +1,334 @@
+Datenschutz | ESTILO Einrichtungsstudio Götzis 
+Ihre Privatsphäre 
+#2 Sie entscheiden, was geladen wird. 
+Verantwortlich ist Ebru Filiz, ESTILO Einrichtungsstudio, Am Garnmarkt 17,
+      6840 Götzis. Technisch notwendig speichern wir ausschließlich Ihre Auswahl.
+      Mit Ihrer Einwilligung verwenden wir die Logo-Komfortfunktion und
+      externe Inhalte von Google Maps. Besuchertracking ist deaktiviert.
+      Rechtsgrundlage der optionalen Verarbeitungen ist Ihre Einwilligung gemäß
+      Art. 6 Abs. 1 lit. a DSGVO und § 165 Abs. 3 TKG 2021. 
+Sie können Ihre Einwilligung jederzeit ohne Angabe von Gründen über
+      „Cookie-Einstellungen“ im Footer widerrufen. Der Widerruf berührt nicht die
+      Rechtmäßigkeit der Verarbeitung bis zum Widerruf. 
+Impressum 
+Datenschutz 
+Alle akzeptieren 
+Alle optionalen ablehnen 
+Individuelle Einstellungen 
+Datenschutz-Einstellungen 
+#2 Technologien individuell auswählen 
+Freiwillige Kategorien sind nicht vorausgewählt. Anbieter, Zweck, Laufzeit
+      und mögliche Übermittlungen werden je Kategorie beschrieben. 
+#3 Notwendige Technologien 
+Immer aktiv 
+Anbieter: ESTILO. Zweck: Speicherung und Nachweis Ihrer Auswahl ohne
+          Nutzerkennung. Technologie: Local Storage estilo-consent-v1 .
+          Inhalt: Version, Zeitstempel, Ablaufzeit und Kategorien. Laufzeit: 180 Tage.
+          Keine Übermittlung an Dritte oder in Drittländer. 
+#3 Funktionale Technologien 
+Logoanimation komfortabel begrenzen 
+Anbieter: ESTILO. Zweck: Die Logoanimation im aktuellen Tab nur einmal
+          anzeigen. Technologie: Session Storage estilo-logo-intro-played-v3 .
+          Laufzeit: bis zum Schließen des Tabs. Keine Übermittlung an Dritte. 
+#3 Externe Inhalte 
+Google Maps auf der Kontaktseite 
+Anbieter: Google Ireland Limited; verbundene Unternehmen wie Google LLC
+          können beteiligt sein. Zweck: interaktive Karte. Erst nach Einwilligung
+          und einem zusätzlichen Klick auf „Karte anzeigen“ werden IP-Adresse sowie
+          Browser-, Geräte- und Aufrufdaten übertragen. Eine Verarbeitung in den USA
+          kann nicht ausgeschlossen werden. Google kann eigene Speichertechnologien
+          einsetzen; deren Laufzeit bestimmt Google. 
+Rechtsgrundlage aller freiwilligen Kategorien ist Art. 6 Abs. 1 lit. a DSGVO
+      in Verbindung mit § 165 Abs. 3 TKG 2021. Ein Widerruf ist jederzeit ohne
+      Angabe von Gründen möglich und berührt die Rechtmäßigkeit der bisherigen
+      Verarbeitung nicht. Details stehen in der 
+Datenschutzinformation . 
+Auswahl speichern 
+Alle optionalen ablehnen 
+Alle akzeptieren 
+Zum Hauptinhalt springen 
+[IMG /images/Logo%20Estilo/Logo_ESTILO_Heller_Hintergurnd_optimiert.png alt='ESTILO Einrichtungsstudio']
+PRODUKTE 
+Übersicht 
+Wohnzimmer 
+Schlafzimmer 
+Esszimmer 
+Büro 
+MEINE LEISTUNGEN 
+ÜBER MICH 
+KONTAKT 
+BERATUNG BUCHEN 
+PRODUKTE 
+Übersicht 
+Wohnzimmer 
+Schlafzimmer 
+Esszimmer 
+Büro 
+MEINE LEISTUNGEN 
+ÜBER MICH 
+KONTAKT 
+BERATUNG BUCHEN 
+Datenschutz 
+#1 Datenschutzinformation 
+Diese Information beschreibt die Verarbeitung personenbezogener Daten beim Besuch der ESTILO-Website und bei einer Kontaktaufnahme. 
+Stand 25. November 2026 
+#2 1. Verantwortliche Ebru Filiz 
+ESTILO Einrichtungsstudio 
+Am Garnmarkt 17 
+6840 Götzis, Österreich 
+Telefon: 
++43 650 2328811 
+E-Mail: 
+office@estilo.at 
+#2 2. Bereitstellung und Hosting 
+Die Website wird über Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA,
+        bereitgestellt. Zur Auslieferung und Absicherung verarbeitet die Hosting-Infrastruktur
+        insbesondere IP-Adresse, Datum und Uhrzeit, aufgerufene Adresse, Datenmenge, HTTP-Status,
+        Referrer sowie Browser- und Geräteinformationen. Zweck ist ein sicherer, stabiler Betrieb
+        und die Abwehr von Missbrauch. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO;
+        unser berechtigtes Interesse besteht in der sicheren Bereitstellung des Webangebots. 
+Netlify verarbeitet Kundendaten für uns als Auftragsverarbeiter auf Grundlage einer
+        Datenverarbeitungsvereinbarung (DPA), die Bestandteil des Self-Serve Subscription Agreement
+        ist. Für bestimmte eigene Service Data, etwa Konto- und Abrechnungsinformationen oder
+        eigene Betriebskennzahlen, handelt Netlify nach dem DPA als eigenständig Verantwortlicher.
+        Personenbezogene Besucher- und Formularinhalte werden dadurch nicht pauschal zu eigenen
+        Service Data. Datenschutzkontakt: 
+privacy@netlify.com . 
+Der DPA unterscheidet folgende reguläre Protokollfristen: 
+CDN- und Zugriffsprotokolle: 30 Tage online; Archivierung bis zu 13 Monate. 
+Allgemeine Plattformprotokolle: 90 Tage online; offline 1 Jahr. 
+Sicherheits- und Missbrauchsprotokolle: 365 Tage online; Archivierung bis zu 6 Jahre. 
+Diese Fristen sind von der Sichtbarkeit einzelner Function-Logs im Kundenbereich zu
+        unterscheiden. Nach Vertragsbeendigung sieht der DPA grundsätzlich die Löschung innerhalb
+        von 90 Tagen vor; Ausnahmen gelten insbesondere für Backups, Protokolle und gesetzliche
+        Aufbewahrungspflichten. 
+Eine ausschließlich innerhalb der Europäischen Union stattfindende Verarbeitung wird
+        nicht zugesichert. Netlify beruft sich für Übermittlungen in die USA auf das EU-US Data
+        Privacy Framework und sieht EU-Standardvertragsklauseln als vertraglichen Ersatzmechanismus
+        vor. Die jeweils eingesetzten Unterauftragnehmer hängen von den tatsächlich genutzten
+        Diensten ab; nicht jeder gelistete Anbieter erhält automatisch Daten unserer Besucher.
+        Weitere Informationen und die vertraglichen Garantien: 
+Netlify-Datenschutzinformation , 
+Netlify-DPA und 
+Netlify Trust Center . 
+#2 3. Kontaktformular und direkte Kontaktaufnahme 
+Für unser Kontaktformular verwenden wir Netlify Forms. Beim Absenden werden Ihr Name,
+        Ihre E-Mail-Adresse, der optionale Betreff und Ihre Nachricht sowie technische
+        Verbindungsdaten an Netlify übermittelt. Name, E-Mail-Adresse und Nachricht sind
+        Pflichtangaben. Netlify verarbeitet und speichert die Formularanfragen in der
+        Formularverwaltung; neue Anfragen werden über die eingerichtete E-Mail-Benachrichtigung
+        an 
+office@estilo.at gemeldet. Die Annahme einer
+        Anfrage durch Netlify ist keine Bestätigung der Zustellung dieser E-Mail.
+        Ein unsichtbares Zusatzfeld (Honeypot) und die Spamfilter von Netlify dienen der
+        Abwehr automatisierter Anfragen. Für Netlify als Dienstleister und mögliche
+        Drittlandübermittlungen beachten Sie auch Abschnitt 2. 
+Zur Spamabwehr setzt Netlify nach seiner veröffentlichten Leistungsbeschreibung auch
+        Akismet von Automattic, Inc., USA, ein. Dabei werden die für die Spamprüfung erforderlichen
+        Formular- und technischen Daten durch die beteiligten Dienstleister verarbeitet.
+        Unser berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO ist die sichere und nutzbare
+        Kontaktmöglichkeit. Die möglichen Drittlandübermittlungen und Garantien sind in Abschnitt 2
+        beschrieben. Weitere Informationen: 
+Netlify Forms: Spamfilter . 
+Bei Kontaktaufnahme über das Formular, per E-Mail oder Telefon verarbeiten wir die mitgeteilten Kontakt- und
+        Nachrichteninhalte sowie erforderliche Verbindungsdaten zur Bearbeitung und Beantwortung.
+        Für vertragliche und vorvertragliche Anfragen gilt Art. 6 Abs. 1 lit. b DSGVO;
+        für sonstige Anfragen Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse ist die
+        sachgerechte Kommunikation. Die technische Absicherung gegen missbräuchliche Anfragen
+        beruht ebenfalls auf Art. 6 Abs. 1 lit. f DSGVO. Eine gesetzliche Pflicht zur
+        Kontaktaufnahme besteht nicht. Ohne die zur Beantwortung erforderlichen Angaben können
+        wir Ihre Anfrage nicht bearbeiten. 
+Wir berücksichtigen bei der Aufbewahrung die bei Netlify gespeicherten Formularanfragen
+        einschließlich Spamnachrichten sowie Benachrichtigungs-E-Mails und weitere erforderliche
+        Kopien. Nicht mehr benötigte Daten werden nach den unten beschriebenen Kriterien gelöscht
+        und die Bestände mindestens jährlich sowie bei konkretem Anlass überprüft. Die in Abschnitt 2
+        genannten Protokollfristen sind keine Aufbewahrungsfristen für Formularinhalte.
+        Weitere Informationen: 
+Netlify Forms: Verwaltung von Anfragen . 
+Unser geschäftliches E-Mail-Postfach wird von World4You Internet Services GmbH,
+        Wolfgang-Pauli-Straße 2, BT3, 4020 Linz, Österreich, als Auftragsverarbeiter betrieben.
+        Der AVV ist Bestandteil der AGB und erfasst Mailprodukte. Laut AVV erfolgt die Verarbeitung
+        in der Regel überwiegend im EU-/EWR-Raum; erforderliche Drittlandübermittlungen unter den
+        Voraussetzungen der Art. 44 ff. DSGVO sind nicht ausgeschlossen. Die Beteiligung von
+        Unterauftragnehmern richtet sich nach der konkret erbrachten Leistung.
+        Informationen: 
+World4You-AVV , 
+Unterauftragnehmer und 
+Datenschutzinformationen . 
+Kundenanfragen und Korrespondenz speichern wir nur so lange, wie dies für Bearbeitung,
+        Geschäftsbeziehungen, gesetzliche Pflichten oder die Geltendmachung, Ausübung oder
+        Verteidigung von Rechtsansprüchen erforderlich ist. Nicht mehr benötigte personenbezogene
+        Daten werden regelmäßig überprüft und gelöscht; gespeicherte Kundenanfragen werden
+        mindestens jährlich überprüft. Steuerlich relevante Unterlagen werden nach den
+        gesetzlichen Aufbewahrungspflichten aufbewahrt, grundsätzlich sieben Jahre gemäß § 132 BAO,
+        bei einschlägigen gesetzlichen Ausnahmen oder anhängigen Verfahren entsprechend länger.
+        Rechtsgrundlage einer gesetzlich erforderlichen Aufbewahrung ist Art. 6 Abs. 1 lit. c DSGVO.
+        Diese Frist gilt nicht pauschal für jede Anfrage. 
+Technische Sicherungskopien und Anbieterprotokolle unterliegen den betrieblichen
+        Sicherungs- und Löschzyklen des Maildienstes. Die öffentlich verfügbaren Informationen
+        legen keine einheitliche konkrete Frist für das eingesetzte E-Mail-Business-Paket fest.
+        Nach Vertragsbeendigung sieht der AVV Rückgabe beziehungsweise Löschung unter
+        Berücksichtigung gesetzlicher und vertraglicher Ausnahmen vor. 
+#2 4. Google Maps und Google-Links 
+Google Maps wird auf der Kontaktseite nicht automatisch geladen. Eine Verbindung zu Google
+        entsteht erst, wenn die Kategorie „Externe Inhalte“ in den Cookie-Einstellungen aktiviert
+        und anschließend zusätzlich „Karte anzeigen“ ausgewählt wird. Google kann insbesondere
+        IP-Adresse, Browser- und Geräteinformationen, den Zeitpunkt des Aufrufs und gegebenenfalls
+        Standort- oder Kontoinformationen verarbeiten und eigene Speichertechnologien einsetzen. 
+Die Einbindung erfolgt auf Grundlage der zuvor erteilten Einwilligung gemäß Art. 6 Abs. 1
+        lit. a DSGVO und § 165 Abs. 3 TKG 2021. Die Auswahl wird für 180 Tage gespeichert und kann
+        jederzeit über „Cookie-Einstellungen“ im Footer widerrufen werden. Bei einem Widerruf wird
+        eine geöffnete Karte entfernt und ein weiterer Abruf unterbunden. Bereits an Google
+        übermittelte Daten können dadurch nicht zurückgerufen werden. Die Rechtmäßigkeit der bis zum
+        Widerruf erfolgten Verarbeitung bleibt unberührt. 
+Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Eine
+        Verarbeitung durch verbundene Unternehmen, insbesondere in den USA, kann nicht ausgeschlossen
+        werden. Google LLC gibt an, am EU-US Data Privacy Framework teilzunehmen und, soweit
+        erforderlich, EU-Standardvertragsklauseln einzusetzen. Weitere Informationen: 
+Datenschutzhinweise von Google und 
+Informationen zu internationalen Datentransfers . 
+Links zur Routenplanung, zu Google-Bewertungen und zur Abgabe einer Bewertung stellen erst beim
+        Anklicken eine Verbindung zum jeweiligen Google-Dienst her. Ab diesem Zeitpunkt gelten auch
+        die Datenschutzbestimmungen des externen Anbieters. 
+#2 5. Cookies und Browser-Speicher 
+Die Website setzt selbst keine Cookies ein. Sie verwendet ausschließlich die folgenden
+        eigenen Browser-Speichereinträge. Die Auswahl und der Logo-Komfortstatus enthalten weder
+        Namen noch Kontaktdaten noch eine eindeutige Besucherkennung und werden nicht an ESTILO
+        oder Dritte übertragen. Für den gesonderten Maps-Nachweis wird nur eine zufällige,
+        auf diesen Vorgang begrenzte Belegreferenz an unseren eigenen Nachweis-Endpunkt übermittelt. estilo-consent-v1 Anbieter: ESTILO. Notwendiger Local-Storage-Eintrag zur Speicherung und technischen
+          Nachweisbarkeit der Einwilligungsentscheidung. Gespeichert werden Versionsnummer,
+          Entscheidungs- und Ablaufzeitpunkt, Art der Auswahl sowie die Zustände der Kategorien
+          notwendig, funktional und externe Inhalte sowie ein dauerhaft deaktiviertes Statistikfeld.
+          Laufzeit: 180 Tage. Danach oder bei
+          einer Änderung der Consent-Version wird erneut gefragt. Rechtsgrundlage ist das berechtigte
+          Interesse an einer rechtskonformen und nachweisbaren Einwilligungsverwaltung gemäß Art. 6
+          Abs. 1 lit. f DSGVO; die Speicherung des Einwilligungsstatus ist als technisch notwendige
+          Funktion im Sinne des § 165 Abs. 3 TKG 2021 vorgesehen. estilo-logo-intro-played-v3 Anbieter: ESTILO. Freiwilliger Session-Storage-Eintrag, der bei aktivierter Kategorie
+          „Funktionale Technologien“ verhindert, dass die Logoanimation im selben Browser-Tab
+          wiederholt wird. Inhalt: ausschließlich der Wert „true“. Laufzeit: bis zum Schließen des
+          Tabs oder bis zum Widerruf. Rechtsgrundlage ist die Einwilligung gemäß Art. 6 Abs. 1 lit. a
+          DSGVO und § 165 Abs. 3 TKG 2021. estilo-maps-proof-v1 Anbieter: ESTILO. Notwendiger Local-Storage-Eintrag zur Zuordnung der ausdrücklich
+          freigegebenen Maps-Nutzung und eines etwaigen Widerrufs. Er enthält eine zufällige
+          Belegreferenz, das Ablaufdatum der Auswahl und gegebenenfalls einen noch zu übermittelnden
+          Widerruf. Keine dauerhafte Besucherkennung, kein Fingerprinting und keine Verknüpfung
+          mit Kontaktanfragen. Bei bestätigtem Widerruf wird er entfernt. Falls die Übermittlung
+          scheitert, wird der Widerruf beim nächsten erreichbaren Seitenaufruf beziehungsweise
+          bei wiederhergestellter Verbindung erneut versucht; die Karte bleibt sofort gesperrt.
+          Die lokale Referenz wird spätestens zwei Tage nach Ablauf der Auswahl beim nächsten
+          Seitenaufruf entfernt. Schließen Sie den Browser dauerhaft oder löschen Sie den Speicher,
+          kann ein ausstehender Widerruf nicht mehr automatisch übermittelt werden. 
+Die Einwilligung gilt 180 Tage. Diese begrenzte Dauer dient der Datensparsamkeit und stellt
+        sicher, dass die Entscheidung bei technischen oder rechtlichen Änderungen regelmäßig erneuert
+        wird. Bei blockiertem Browserspeicher, ungültigen Daten, einer abgelaufenen Entscheidung oder
+        technischen Fehlern bleiben sämtliche freiwilligen Kategorien deaktiviert. Ist das Entfernen
+        eines gespeicherten Eintrags beim Widerruf blockiert, werden die Dienste im geöffneten Tab
+        deaktiviert und Sie werden aufgefordert, den Website-Speicher im Browser zu löschen. 
+Die Entscheidung wird ausschließlich lokal auf Ihrem Endgerät gespeichert. Sie enthält
+        keine dauerhafte Besucher-ID. Zusätzlich speichern wir bei der bewussten Maps-Freigabe
+        einen pseudonymen Nachweis über Netlify Functions und Netlify Blobs. Er umfasst den
+        serverseitigen Freigabezeitpunkt, den aus der Auswahl abgeleiteten Entscheidungs- und
+        Ablaufzeitpunkt, die Informationsversion samt Prüfsumme, die freigegebene Kategorie
+        „Externe Inhalte“ für Google Maps und gegebenenfalls den Widerrufszeitpunkt.
+        Im Einwilligungsspeicher werden keine IP-Adressen, Namen, E-Mail-Adressen, vollständigen
+        Referrer oder Browserprofile gespeichert. Technische Hostingprotokolle sind davon getrennt;
+        hierfür gelten die Angaben im Hostingabschnitt. Zugriff auf Nachweise haben nur befugte
+        Personen und der Hostingdienstleister; eine öffentliche Abfrage ist nicht vorgesehen. 
+Der Nachweis dient der Rechenschaftspflicht nach Art. 7 Abs. 1 DSGVO; Rechtsgrundlage
+        ist Art. 6 Abs. 1 lit. c in Verbindung mit Art. 7 Abs. 1 DSGVO. Die hierfür notwendige
+        lokale Zuordnung ist als technisch notwendige Funktion nach § 165 Abs. 3 TKG 2021
+        vorgesehen. Wir bewahren den Beleg höchstens bis zum Ablauf der zugehörigen Auswahl
+        von 180 Tagen auf, nach einem erfassten Widerruf höchstens noch 30 Tage und niemals
+        länger als bis zum ursprünglichen Auswahlablauf. Die kurze Nachfrist ermöglicht die
+        Kontrolle von Widerruf und Bearbeitung; ein allgemeines langfristiges Anspruchsarchiv
+        wird nicht angelegt. Für einen abgebrochenen Freigabeversuch ohne vorhandenen Beleg kann
+        ein Sperrvermerk für höchstens 24 Stunden entstehen. Ein stündlicher Löschlauf prüft
+        abgelaufene Nachweise und bestätigt
+        ihre Entfernung. Bei technischen Ausfällen oder einer tarifbedingten Dienstpause kann
+        sich die Löschung verzögern; die Verantwortliche muss solche Störungen kontrollieren
+        und die Bereinigung nachholen. Ohne bestätigte erforderliche Nachweisspeicherung laden
+        wir die Karte nicht. Die Speicherung ist auf Frankfurt konfiguriert; dies ist keine
+        Zusicherung ausschließlich europäischer Verarbeitung sämtlicher Netlify-Dienste. 
+Sie können die lokalen Datensätze mit den Browserfunktionen jederzeit löschen.
+        Danach wird erneut nach Ihrer Auswahl gefragt. Bereits gespeicherte Nachweise werden
+        dadurch nicht automatisch auf dem Server gelöscht; ohne lokale Belegreferenz kann ihre
+        Zuordnung eingeschränkt sein. Gesetzliche Rechte können Sie bei der Verantwortlichen
+        geltend machen. Für Netlify gelten die im Hostingabschnitt beschriebenen Transfergarantien. 
+Die Einstellungen können jederzeit ohne Angabe von Gründen über „Cookie-Einstellungen“ im
+        Footer geändert oder widerrufen werden. Dabei werden nicht mehr zulässige eigene
+        Speichereinträge entfernt und weitere optionale Abrufe unterbunden. Der Widerruf berührt nicht
+        die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung. 
+#2 6. Keine Besucherstatistik 
+Die Website verwendet kein Besuchertracking. Es werden keine Analytics-Skripte geladen,
+        keine Analysedaten an Umami übermittelt und keine Tracking-Cookies gesetzt.
+        Eine Statistik-Einwilligung wird nicht angeboten. 
+#2 7. Schriften, Bilder und externe Inhalte 
+Die Website verwendet lokale Bilddateien und auf dem Endgerät vorhandene Systemschriften. Zum
+        Laden der Seitenschriften oder Produktbilder wird keine Verbindung zu einem externen
+        Schrift- oder Bilddienst hergestellt. Externe Inhalte werden nur in den ausdrücklich
+        beschriebenen Fällen oder nach dem Anklicken eines externen Links abgerufen. 
+#2 8. Kundenbewertungen 
+Die dargestellten Bewertungen stammen von Kunden von ESTILO und wurden aus unserem
+        Google-Unternehmensprofil übernommen. Es handelt sich um eine Auswahl veröffentlichter
+        Kundenbewertungen. Die Kundenbeziehung ist ESTILO aus der persönlichen Betreuung der
+        Verfasser bekannt. 
+Wir veröffentlichen die Bewertungstexte und Sternebewertungen mit Erlaubnis der Verfasser.
+          Namen beziehungsweise Namenskürzel werden auf unserer Website nicht mehr als
+          Verfasserbezeichnung veröffentlicht. Stattdessen verwenden wir die neutrale Bezeichnung
+          „ESTILO-KUNDE · GOOGLE“. Selbstnennungen in zwei Bewertungstexten wurden ebenfalls
+          entfernt; im Übrigen bleiben die Bewertungstexte unverändert. Eine Wiedererkennung anhand
+          des Wortlauts der ursprünglichen Google-Bewertung kann weiterhin möglich sein; eine
+          vollständige Anonymisierung wird nicht behauptet. Die Quelle dieser Angaben
+        ist unser Google-Unternehmensprofil. Zweck ist, Interessierten authentische Erfahrungen
+        mit unseren Leistungen zugänglich zu machen. Wir stützen die Veröffentlichung auf unser
+        berechtigtes Interesse an dieser Information gemäß Art. 6 Abs. 1 lit. f DSGVO. 
+Die Angaben sind auf der Website öffentlich abrufbar und werden über unseren Hostingdienst
+        bereitgestellt; Kopien durch Suchmaschinen oder andere Dritte sind möglich. Wir überprüfen
+        die weitere Erforderlichkeit und Aktualität regelmäßig und bei konkretem Anlass. Die
+        Veröffentlichung endet, wenn ihr Zweck entfällt oder eine einschlägige rechtliche
+        Verpflichtung zur Entfernung besteht. 
+Betroffene können sich unter 
+office@estilo.at an uns
+        wenden, der Verarbeitung aus Gründen ihrer besonderen Situation widersprechen und die
+        gesetzlichen Rechte auf Auskunft, Berichtigung, Löschung und Einschränkung geltend machen.
+        Wir prüfen solche Anliegen unverzüglich. Die Entfernung von unserer Website verändert die
+        ursprüngliche Google-Bewertung nicht automatisch. Die weiteren Angaben zu Verantwortlicher,
+        Hosting und Beschwerdemöglichkeiten stehen in den entsprechenden Abschnitten dieser
+        Datenschutzinformation. 
+#2 9. Rechte betroffener Personen 
+Nach Maßgabe der gesetzlichen Voraussetzungen bestehen insbesondere Rechte auf Auskunft,
+        Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.
+        Eine erteilte Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. Zur
+        Ausübung dieser Rechte kann die oben genannte E-Mail-Adresse verwendet werden. 
+Widerspruchsrecht: Soweit eine Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO
+        beruht, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit
+        Widerspruch einlegen. Wir verarbeiten die Daten dann nicht weiter, es sei denn, es bestehen
+        nachweisbare zwingende schutzwürdige Gründe oder die Verarbeitung dient der Geltendmachung,
+        Ausübung oder Verteidigung von Rechtsansprüchen. 
+Betroffene Personen haben außerdem das Recht auf Beschwerde bei einer Datenschutzbehörde. In
+        Österreich ist dies die Österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Wien,
+        E-Mail: 
+dsb@dsb.gv.at . 
+#2 10. Automatisierte Entscheidungen 
+Es findet keine ausschließlich automatisierte Entscheidungsfindung einschließlich Profiling
+        im Sinne von Art. 22 DSGVO statt. 
+[IMG /images/Logo%20Estilo/Logo_ESTILO_Dunkle_Hintergung_optimiert.png alt='ESTILO Einrichtungsstudio']
+#2 Kontakt 
+estilo Einrichtungsstudio 
+Ebru Filiz Am Garnmarkt 17 
+6840 Götzis 
++43 (650) 2328811 
+office@estilo.at 
+estilo.at 
+#2 Öffnungszeiten 
+Möbelgeschäft: 
+Mo–Fr: 9:00–18:00 Uhr 
+Samstag: 9:00–14:00 Uhr 
+Kostenfrei parken Am Garnmarkt Tiefgarage 
+Telefonisch erreichbar: 
+Mo–Sa: 08:00–19:00 Uhr 
++43 650 232 88 11 
+© 2026 ESTILO. Alle Rechte vorbehalten. 
+Wohnideen & Inspiration 
+Impressum 
+Datenschutz 
+Cookie-Einstellungen 
