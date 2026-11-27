@@ -37,8 +37,8 @@ export class Welt {
     this.o = o;
     this.renderer = new THREE.WebGLRenderer({ canvas: o.canvas, antialias: !o.handy, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, o.handy ? 1.5 : 2));
-    this.renderer.toneMapping = THREE.AgXToneMapping;
-    this.renderer.toneMappingExposure = 0.55;
+    this.renderer.toneMapping = THREE.NeutralToneMapping; // erhält Farbtöne (AgX entsättigte das Sofa)
+    this.renderer.toneMappingExposure = 0.62;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.szene.background = new THREE.Color('#F3EEE7');
   }
@@ -213,19 +213,19 @@ export class Welt {
     if (Math.abs(this.kamera.fov - fov) > 0.01) { this.kamera.fov = fov; this.kamera.updateProjectionMatrix(); }
   }
 
-  private versatz = 0;
-  /** Bild seitlich verschieben (CSS-Pixel), damit links Platz für Text bleibt */
-  setVersatz(px: number) {
-    if (Math.abs(px - this.versatz) < 0.5) return; this.versatz = px;
+  private versatz = 0; private versatzY = 0;
+  /** Bild verschieben (CSS-Pixel): Desktop nach rechts (Text links), Handy nach oben (Text unten) */
+  setVersatz(px: number, py = this.versatzY) {
+    if (Math.abs(px - this.versatz) < 0.5 && Math.abs(py - this.versatzY) < 0.5) return; this.versatz = px; this.versatzY = py;
     const c = this.o.canvas; const w = c.clientWidth, h = c.clientHeight;
-    if (px === 0) this.kamera.clearViewOffset(); else this.kamera.setViewOffset(w, h, -px, 0, w, h);
+    if (px === 0 && py === 0) this.kamera.clearViewOffset(); else this.kamera.setViewOffset(w, h, -px, py, w, h);
     this.schmutzig = true;
   }
 
   groesse() {
     const c = this.o.canvas; const w = c.clientWidth, h = c.clientHeight;
     this.renderer.setSize(w, h, false); this.kamera.aspect = w / h;
-    const v = this.versatz; this.versatz = -1; this.setVersatz(v);
+    const v = this.versatz, vy = this.versatzY; this.versatz = -1; this.setVersatz(v, vy);
     this.kamera.updateProjectionMatrix();
     this.setzeKamera(this.ist, true); this.schmutzig = true; this.render();
   }

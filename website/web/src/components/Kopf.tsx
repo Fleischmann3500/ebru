@@ -7,6 +7,13 @@ import { navigation } from '@/lib/content';
 export default function Kopf({ ueberSzene = false }: { ueberSzene?: boolean }) {
   const [offen, setOffen] = useState(false);
   const [aktiv, setAktiv] = useState('');
+  const [frei, setFrei] = useState(ueberSzene); // transparent nur über der 3D-Strecke
+  useEffect(() => {
+    if (!ueberSzene) return;
+    const pruefen = () => { const w = document.getElementById('wohnwelten'); setFrei(!!w && w.getBoundingClientRect().bottom > 80); };
+    pruefen(); window.addEventListener('scroll', pruefen, { passive: true });
+    return () => window.removeEventListener('scroll', pruefen);
+  }, [ueberSzene]);
   useEffect(() => {
     const ids = navigation.map((n) => n.href.split('#')[1]).filter(Boolean);
     const io = new IntersectionObserver((e) => e.forEach((x) => x.isIntersecting && setAktiv(x.target.id)), { rootMargin: '-45% 0px -50% 0px' });
@@ -14,7 +21,7 @@ export default function Kopf({ ueberSzene = false }: { ueberSzene?: boolean }) {
     return () => io.disconnect();
   }, []);
   return (
-    <header className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 lg:px-14 lg:py-6 ${ueberSzene ? '' : 'bg-leinen/90 backdrop-blur-sm'}`}>
+    <header className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 lg:px-14 lg:py-6 ${frei ? '' : 'bg-leinen'}`}>
       <Link href="/" aria-label="ESTILO Einrichtungsstudio, zur Startseite" className="block" data-logo-kopf>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/estilo-logo.svg" alt="" width={1400} height={615} className="h-9 w-auto lg:h-12" style={{ opacity: 'var(--kopf-logo, 1)' as unknown as number }} />

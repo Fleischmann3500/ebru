@@ -1,8 +1,8 @@
 # ESTILO Einrichtungsstudio · Website
 
-**Stand (27.11.2026):** Hero-Richtung A + C gewählt. Als Nächstes: Blender-Szene mit Poly-Haven-Assets.
+**Stand (27.11.2026):** Erste vollständige Fassung gebaut: Blender-Wohnung mit gebackenem Licht, Website mit Übergang Logo → Raum, Kamerafahrt durch vier Räume, Sofa zum Drehen, Ablauf, Ebru, Google-Stimmen, Besuch mit Formular, Galerie, Impressum, Datenschutz, Sanity-Studio. Noch nicht live. Größtes offenes Thema: Preis vereinbaren, dann Vertrag.
 
-**Status:** Design
+**Status:** Umsetzung
 **Geld:** Preis noch nicht vereinbart · bezahlt 0 € · offen 0 € · Ausgaben 0 €
 
 ---
@@ -66,10 +66,17 @@ Was sie macht: Möbelhandel und persönliche Einrichtungsberatung (Wohnzimmer, S
 | 27.11.2026 | Eigene Cloud-Umgebung „ebru“ | estilo.at war im Standard-Netz gesperrt |
 | 27.11.2026 | Hero: A + C (Logo wird Raum per Dolly-Zoom, Sofa zum Drehen an der Wohnzimmer-Station) | Leitmotiv aus dem eigenen Logo, beide 3D-Wünsche in einer Geschichte |
 | 27.11.2026 | Knopf in `#56683E` statt `#6E8450` | Heller Text auf `#6E8450` nur ca. 4,4 : 1, AA verlangt 4,5 |
+| 27.11.2026 | Einstieg als Match-Cut statt Dolly-Zoom | Mit echtem Gebäude sähe man beim Dolly-Zoom über und unter dem Raum ins Freie; so fliegen die Logo-Teile direkt auf Sofa, Leuchten, Lamellen |
+| 27.11.2026 | Hauptmöbel selbst modelliert, Poly Haven nur für Sessel, Lowboard, Pflanzen, Deko | Poly-Haven-Möbel sind fast alle antik/rustikal, passen nicht zu ESTILO |
+| 27.11.2026 | Keine Google-Karte, nur Link „Route planen“ | Kein Einwilligungsbanner nötig, keine Verbindung zu Google beim Laden |
 | 27.11.2026 | Sitemap: `/`, `/wohnwelten`, `/impressum`, `/datenschutz` | Kein Shop, Formular ohne Upload, Galerie der alten Seite braucht Platz |
 | 27.11.2026 | Startseite: Logo wird Raum, Wohnwelten (4 Kamerastationen), 5 Schritte, Ebru, Stimmen, Besuch + Formular | Reihenfolge wie ein Besuch im Studio: ansehen, verstehen, kennenlernen, vorbeikommen |
 
 ## Offen
+
+- ❓ Datenschutz: Anbieterangaben und AV-Verträge von Vercel und Resend vor Livegang prüfen (Text steht in `website/web/src/app/datenschutz/page.tsx`), Resend-Domain estilo.at verifizieren
+- ❓ Sanity-Projekt anlegen (Konto auf Ebru), Projekt-ID in Vercel eintragen
+- ❓ Bewertungen: Erlaubnis der Verfasser gilt laut alter Seite; Kürzungen sind mit […] markiert, ok für Ebru?
 
 - ❓ Preis, Stundensatz → danach Vertrag (3.4)
 - ❓ Deadline und Stunden pro Woche
@@ -83,3 +90,5 @@ Was sie macht: Möbelhandel und persönliche Einrichtungsberatung (Wohnzimmer, S
 
 - 27.11.2026 · Projekt angelegt, Fragen geklärt, alte Seite (Texte + 343 Bilder) nach `Vom Kunden/estilo-at/` gesichert
 - 27.11.2026 · Logo vektorisiert (`website/logo/estilo-logo.svg`), drei Hero-Skizzen gezeigt, A + C gewählt
+- 27.11.2026 · Blender-Szene (szene.py), Licht gebacken (128 Samples), Website gebaut und in Chromium geprüft (Desktop), Sanity-Studio baut
+- 27.11.2026 · Möbel-Lichtatlas 2048 px, Handy-Variante (4,8 MB), Farben im Browser korrigiert (Neutral-Tonemapping), Handy-Layout, Kopfzeile; geprüft Desktop + Handy

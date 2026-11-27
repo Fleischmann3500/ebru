@@ -70,7 +70,7 @@ export default function Erlebnis({ logoSvg, hero, raeume, sofa: sofaText }: { lo
     }
     const w = welt.current;
     if (w) {
-      w.setFortschritt(0); w.setVersatz(0); w.groesse();
+      w.setFortschritt(0); w.setVersatz(0, 0); w.groesse();
       for (const g of ['sofa', 'leuchten', 'lamellen']) ziel.current[g] = w.rechteck(ZIELE[g]);
     }
     const kopf = document.querySelector('[data-logo-kopf] img')?.getBoundingClientRect();
@@ -116,7 +116,8 @@ export default function Erlebnis({ logoSvg, hero, raeume, sofa: sofaText }: { lo
       if (w) {
         w.setFortschritt(pp);
         const breit = window.innerWidth >= 900;
-        w.setVersatz(breit ? glatt((u - MORPH - 0.05) / 0.5) * window.innerWidth * 0.17 : 0);
+        const nach = glatt((u - MORPH - 0.05) / 0.5);
+        w.setVersatz(breit ? nach * window.innerWidth * 0.17 : 0, breit ? 0 : nach * vh * 0.2);
         w.setSichtbar(u < GESAMT + 1.2);
       }
     };
