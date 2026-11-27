@@ -11,7 +11,7 @@ try: sz.cycles.denoiser = 'OPENIMAGEDENOISE'
 except Exception: pass
 sz.cycles.sample_clamp_indirect = 1.0
 sz.render.resolution_x, sz.render.resolution_y = breite, int(breite * 9 / 16)
-sz.view_settings.view_transform = 'AgX'; sz.view_settings.look = 'AgX - Medium High Contrast'; sz.view_settings.exposure = -0.3
+sz.view_settings.view_transform = 'AgX'; sz.view_settings.look = 'AgX - Medium High Contrast'; sz.view_settings.exposure = 0.15
 ziel = os.path.join(HIER, 'vorschau'); os.makedirs(ziel, exist_ok=True)
 for o in sorted([o for o in sz.objects if o.type == 'CAMERA'], key=lambda o: o.name):
     sz.camera = o; sz.render.filepath = os.path.join(ziel, o.name + '.jpg'); sz.render.image_settings.file_format = 'JPEG'

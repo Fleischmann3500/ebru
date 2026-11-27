@@ -3,10 +3,10 @@ Modelle als glTF 1k, Texturen 1k (diff, nor_gl, rough), HDRI 2k. Aufruf: python3
 import json, os, urllib.request
 UA = {'User-Agent': 'estilo-site-build/1.0'}
 ZIEL = os.path.join(os.path.dirname(__file__), 'assets')
-MODELLE = ['mid_century_lounge_chair', 'modern_wooden_cabinet', 'potted_plant_02', 'potted_plant_04',
+MODELLE = ['ceramic_vase_02', 'brass_vase_01', 'mid_century_lounge_chair', 'modern_wooden_cabinet', 'potted_plant_02', 'potted_plant_04',
            'ceramic_vase_01', 'ceramic_vase_03', 'ceramic_vase_04', 'decorative_book_set_01',
            'standing_picture_frame_01', 'wicker_basket_02', 'wooden_bowl_01', 'pachira_aquatica_01']
-TEXTUREN = ['wool_boucle', 'velour_velvet', 'rough_linen', 'oak_veneer_01', 'herringbone_parquet',
+TEXTUREN = ['wood_floor', 'marble_01', 'white_stucco', 'white_oak_veneer', 'wool_boucle', 'velour_velvet', 'rough_linen', 'oak_veneer_01', 'herringbone_parquet',
             'white_plaster_02', 'poly_wool_herringbone', 'black_walnut_veneer_01', 'brown_leather']
 HDRI = ['alps_field']
 def hole(url, pfad):
