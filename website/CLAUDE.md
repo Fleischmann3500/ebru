@@ -1,0 +1,30 @@
+# ESTILO Einrichtungsstudio · Website
+
+Projektdaten, Entscheidungen, Offenes: `../projekt/Projekt.md`. Änderungsrunden: `../projekt/Notizen/Runde-<N>.md`.
+
+## Aufbau
+- `web/` Next.js 15 (App Router, TypeScript, Tailwind 4). Texte nur in `src/lib/content.ts`, nie hart im JSX.
+- `blender/` Szene als Skript: `laden.py` (Poly Haven) → `szene.py` → `vorschau.py` → `backen.py` → `export.py` (+ `handy`) → `export.sh` (Meshopt) → `texturen_web.py`, `web_dateien.py`.
+- `logo/` Logo als Vektor, Gruppen `logo-sofa`, `logo-leuchten`, `logo-lamellen`, `logo-schrift` (für den Übergang Logo → Raum).
+
+## Leitmotiv: Das Logo wird Raum
+Das flache Logo (grünes Sofa, drei Pendelleuchten, sechs Lamellen) fliegt in den 3D-Raum, dann führt die Kamera durch Wohnzimmer, Sofa zum Anfassen, Schlafzimmer, Esszimmer, Büro. Was das nicht erzählt, fliegt raus.
+
+## Stil: Editorial ruhig
+- Farben (max. 4): Leinen `#F3EEE7`, Hell `#FFFDF9`, Sofa-Grün `#6E8450`, Text `#24251F`. Knopfgrund `#56683E` (Kontrast).
+- Akzent Grün NUR: Knopf „Beratung anfragen“, aktiver Menüpunkt, Auswahl beim Bezug, Sofa in der Szene. Nie Fließtext, nie Flächen.
+- Schriften (max. 2, lokal über @fontsource): Cormorant Garamond (Überschriften), Jost (Text).
+- Bewegung: ruhig gleiten. Kein Auto-Scroll, kein Abfangen des Mausrads. Formular und Rechtsseiten ohne Scroll-Effekte.
+- `prefers-reduced-motion`: Kamera springt ohne Nachlauf, Endzustände sichtbar.
+
+## Verboten (Anti-Slop)
+- Erfundene Inhalte: keine Preise (es gibt keine online), keine erfundenen Zahlen, Kunden, Testimonials. Bewertungen nur echte von Google, Kürzungen mit […].
+- Grundriss- oder Haustechnikplanung versprechen (Gewerbe: nur optische Einrichtungsvorschläge).
+- Markennamen der Hersteller zeigen, solange nicht freigegeben.
+- Zähler („1 von 8“), nummerierte Sektionslabels, Stat-Reihen, Emoji, Verläufe in Lila, Glas-Effekte.
+- Dekorative Zeichen im Text (·, →, Slash-Ketten), Meta-Zeilen („Get in touch“), Prahl-Sätze.
+- Knöpfe ohne klare Aktion („Mehr erfahren“).
+
+## Prüfen
+`npx tsc --noEmit`, `npx eslint src`, `npx next build`. Playwright bei 1440×900 und 390×844, runter und hoch.
+WebGL in Chromium: `--use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader`, `reducedMotion: 'reduce'`, auf `window.__welt.bereit` warten.

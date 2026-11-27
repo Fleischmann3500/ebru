@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/400-italic.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/jost/300.css";
+@import "@fontsource/jost/400.css";
+@import "@fontsource/jost/500.css";
+
+/* Vier Farben: Grund, Papier, Akzent, Text. Akzent (Sofa-Grün) nur für: Knopf "Beratung anfragen",
+   aktiven Menüpunkt, Auswahlrahmen beim Bezug, Sofa in der Szene. Nie für Fließtext oder Flächen. */
+:root {
+  --leinen: #F3EEE7;
+  --hell: #FFFDF9;
+  --gruen: #6E8450;
+  --gruen-tief: #56683E; /* Knopfgrund: heller Text darauf 6,1 : 1 */
+  --text: #24251F;
+  --gedaempft: #5E5F55;  /* 6,0 : 1 auf Leinen */
+  --linie: #24251F1F;
+}
+
+@theme inline {
+  --color-leinen: var(--leinen);
+  --color-hell: var(--hell);
+  --color-gruen: var(--gruen);
+  --color-gruen-tief: var(--gruen-tief);
+  --color-text: var(--text);
+  --color-gedaempft: var(--gedaempft);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: Jost, "Segoe UI", sans-serif;
+}
+
+html { background: var(--leinen); color: var(--text); -webkit-text-size-adjust: 100%; }
+body { background: var(--leinen); color: var(--text); font-family: var(--font-sans); font-weight: 300; line-height: 1.6; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; line-height: 1; }
+::selection { background: var(--gruen-tief); color: var(--hell); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+.knopf {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px;
+  background: var(--gruen-tief); color: var(--hell); font: 400 15px/1 var(--font-sans); letter-spacing: .04em;
+  text-decoration: none; transition: background .25s ease;
+}
+.knopf:hover { background: #4A5A35; }
+.textlink { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
+}

@@ -1,0 +1,280 @@
+{
+ "bett_samt": {
+  "tex": "bett_samt",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.85,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "bettwaesche": {
+  "tex": "bettwaesche",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.95,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "ceramic_vase_01": {},
+ "ceramic_vase_03": {},
+ "ceramic_vase_04": {},
+ "decke": {
+  "tex": "",
+  "farbe": [
+   0.9646862478944651,
+   0.938685728457888,
+   0.8962693533742664
+  ],
+  "rough": 0.95,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "eiche": {
+  "tex": "oak_veneer_01",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.55,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "fensterrahmen": {
+  "tex": "",
+  "farbe": [
+   0.02315336617811041,
+   0.024157632448504756,
+   0.0202885630566524
+  ],
+  "rough": 0.4,
+  "metall": 0.3,
+  "emit": null,
+  "glas": false
+ },
+ "glas": {
+  "tex": "",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.7,
+  "metall": 0.0,
+  "emit": null,
+  "glas": true
+ },
+ "kissen": {
+  "tex": "kissen",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.9,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "lack_kaschmir": {
+  "tex": "",
+  "farbe": [
+   0.6866853124353135,
+   0.6307571363461468,
+   0.5457244613701866
+  ],
+  "rough": 0.35,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "lack_salbei": {
+  "tex": "",
+  "farbe": [
+   0.20507873639031693,
+   0.25415209433082675,
+   0.14412847085805777
+  ],
+  "rough": 0.35,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "led_streifen": {
+  "tex": "",
+  "farbe": [
+   1.0,
+   0.9,
+   0.75
+  ],
+  "rough": 0.7,
+  "metall": 0.0,
+  "emit": [
+   1.0,
+   0.8,
+   0.55
+  ],
+  "glas": false
+ },
+ "leuchte_glut": {
+  "tex": "",
+  "farbe": [
+   1.0,
+   0.9,
+   0.75
+  ],
+  "rough": 0.7,
+  "metall": 0.0,
+  "emit": [
+   1.0,
+   0.82,
+   0.6
+  ],
+  "glas": false
+ },
+ "metall_schwarz": {
+  "tex": "",
+  "farbe": [
+   0.012983032342173012,
+   0.013702083047289686,
+   0.010960094006488246
+  ],
+  "rough": 0.35,
+  "metall": 0.6,
+  "emit": null,
+  "glas": false
+ },
+ "mid_century_lounge_chair": {},
+ "modern_wooden_cabinet": {},
+ "modern_wooden_cabinet.001": {},
+ "nuss": {
+  "tex": "nuss",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.5,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "pachira_aquatica_01_bark": {},
+ "pachira_aquatica_01_leaves": {},
+ "parkett": {
+  "tex": "herringbone_parquet",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.68,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "potted_plant_02_leaves": {},
+ "potted_plant_02_leaves.001": {},
+ "potted_plant_02_pot": {},
+ "potted_plant_02_pot.001": {},
+ "potted_plant_04": {},
+ "putz": {
+  "tex": "putz",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.9,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "putz_warm": {
+  "tex": "putz_warm",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.9,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "sofa_gruen": {
+  "tex": "sofa_gruen",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.95,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "sofa_lehne": {
+  "tex": "sofa_lehne",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.95,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "standing_picture_frame_01": {},
+ "standing_picture_frame_01_artwork": {},
+ "standing_picture_frame_01_glass": {},
+ "stein_platte": {
+  "tex": "",
+  "farbe": [
+   0.6239603916750761,
+   0.5775804404296506,
+   0.5028864580325687
+  ],
+  "rough": 0.3,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "stuhl_oliv": {
+  "tex": "stuhl_oliv",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 0.85,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "teppich": {
+  "tex": "teppich",
+  "farbe": [
+   0.8,
+   0.8,
+   0.8
+  ],
+  "rough": 1.0,
+  "metall": 0.0,
+  "emit": null,
+  "glas": false
+ },
+ "wicker_basket_02": {},
+ "wooden_bowl_01": {}
+}

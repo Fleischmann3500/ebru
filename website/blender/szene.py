@@ -158,6 +158,11 @@ def importiere(name, pos, rot_z=0.0, skala=1.0, vc=True):
     xs = [v.co.x for v in me.vertices]; ys = [v.co.y for v in me.vertices]; zs = [v.co.z for v in me.vertices]
     me.transform(Matrix.Translation((-(min(xs) + max(xs)) / 2, -(min(ys) + max(ys)) / 2, -min(zs))))
     o.location = pos
+    dreiecke = sum(len(p.vertices) - 2 for p in me.polygons)
+    if dreiecke > 25000:  # für das Web ausdünnen (Ziel: ganze Szene < 350k Dreiecke)
+        bpy.context.view_layer.objects.active = o; o.select_set(True)
+        d = o.modifiers.new('duenn', 'DECIMATE'); d.ratio = 25000 / dreiecke; d.use_collapse_triangulate = True
+        bpy.ops.object.modifier_apply(modifier='duenn'); o.select_set(False)
     return flagge(o, vc=vc)
 
 # ---------------------------------------------------------------- Architektur

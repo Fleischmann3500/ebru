@@ -1,0 +1,60 @@
+{
+ "bett_samt": {
+  "datei": "bett_samt",
+  "grau": true,
+  "farbe": "#B8AB97"
+ },
+ "bettwaesche": {
+  "datei": "bettwaesche",
+  "grau": true,
+  "farbe": "#F1EEE6"
+ },
+ "eiche": {
+  "datei": "oak_veneer_01",
+  "grau": false
+ },
+ "kissen": {
+  "datei": "kissen",
+  "grau": true,
+  "farbe": "#545649"
+ },
+ "nuss": {
+  "datei": "nuss",
+  "grau": true,
+  "farbe": "#5A402F"
+ },
+ "parkett": {
+  "datei": "herringbone_parquet",
+  "grau": false
+ },
+ "putz": {
+  "datei": "putz",
+  "grau": true,
+  "farbe": "#EFEBE5"
+ },
+ "putz_warm": {
+  "datei": "putz_warm",
+  "grau": true,
+  "farbe": "#E7E0D3"
+ },
+ "sofa_gruen": {
+  "datei": "sofa_gruen",
+  "grau": true,
+  "farbe": "#5E6D44"
+ },
+ "sofa_lehne": {
+  "datei": "sofa_lehne",
+  "grau": true,
+  "farbe": "#57633F"
+ },
+ "stuhl_oliv": {
+  "datei": "stuhl_oliv",
+  "grau": true,
+  "farbe": "#5C5D3B"
+ },
+ "teppich": {
+  "datei": "teppich",
+  "grau": true,
+  "farbe": "#E5DFD4"
+ }
+}
